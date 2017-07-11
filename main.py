@@ -1,4 +1,5 @@
-# Pyman (1.0) by XenonNSMB
+#!/usr/bin/env python
+# Pyman (1.1) by XenonNSMB
 # MIT licensed.
 
 # To configure Pyman, skip to line 14.
