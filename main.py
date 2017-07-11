@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Pyman (1.1) by XenonNSMB
 # MIT licensed.
 
