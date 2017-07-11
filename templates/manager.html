@@ -1,0 +1,44 @@
+$def with (rendstr)
+<!DOCTYPE html>
+<html>
+<head>
+<title>pyman</title>
+<style>
+* {
+  font-family:sans-serif;
+}
+</style>
+<script src="/static/jquery.js"></script>
+<script>
+function reload() {
+  window.location = window.location
+}
+function starttask(taskname) {
+  console.log("AJAX...")
+  jQuery.ajax({
+          type: "POST",
+          data: {task : taskname, type : "start"},
+          success: function(data) {
+          document.write(data);
+          },
+          });
+  window.setTimeout(reload, 500)
+}
+function stoptask(taskname) {
+  console.log("AJAX...")
+  jQuery.ajax({
+          type: "POST",
+          data: {task : taskname, type : "stop"},
+          success: function(data) {
+          document.write(data);
+          },
+          });
+  window.setTimeout(reload, 500)
+}
+</script>
+</head>
+<body>
+  <h1>pyman<sup>1.0</sup></h1>
+  <p>$:rendstr</p>
+</body>
+</html>
